@@ -31,3 +31,9 @@ def test_enter_3_returns_3():
 
 def test_enter_4_returns_2_2():
     assert generate_prime_factors(4, []) == [2,2]  # test "4" input returns "2,2" in the factors array
+
+def test_enter_6_returns_2_3():
+    assert generate_prime_factors(6, []) == [2,3]  # test "6" input returns "2,3" in the factors array
+
+def test_enter_8_returns_2_2_2():
+    assert generate_prime_factors(8, []) == [2,2,2]  # test "8" input returns "2,2,2" in the factors array

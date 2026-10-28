@@ -19,29 +19,27 @@ def validate_type(number):
     return number
 
 def generate_prime_factors(number,factors):
+    divisor = [2,3]
 
-    test = number                           # test variable for iterative testing
+    for divisor in divisor:                             # use the same loop for prime value in the array
+        test = number                                   #initialize test variable for iterative testing
+        while test / divisor  >= 1:                     # while loop to interate values
 
-    while test / 2 >= 1:                    # while loop to interate values over "2"
+            if test % divisor  == 0:                    # if the remainder = 0 then the number is divisable evenly
+                factors.append(divisor)                 # append divisor to the factors list
+            test = test / divisor                       # iterate test value by divisor if number has more than 2 prime factors
 
-        if test % 2 == 0:                   # if the remainder = 0 then the number is divisable evenly by 2
-            factors.append(2)               # append "2" to the factors list
-        test = test / 2                     # iterate test value by 2 if number has more than 2 prime factors
-
-    test = number                           # reset test variable for prime 3 testing
-    if number % 3 == 0:                     # if the remainder = 0 then the number is divisable evenly by 3
-        factors.append(3)                   # append "3" to the factors list
 
     return factors                          # return the factors variable to the main function
 
 
 def main():
 
-    number = 4                                          # variable from which to generate the prime factors
+    number = 10                                         # variable from which to generate the prime factors
     factors = []                                            # variable to hold the prime factors
     validate_type(number)                                   # call Validate_type function to verify the variable is a positive integer
     factors = generate_prime_factors(number,factors)        # cal generate_prime_factors to calculate the factors for a given number
-    print (f'the {number} has {factors}as prime factors')   # print the number and it's factors to the terminal
+    print (f'the {number} has {factors} as prime factors')   # print the number and it's factors to the terminal
 
 if __name__ == '__main__':
     main()
