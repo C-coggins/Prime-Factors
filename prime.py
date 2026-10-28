@@ -19,7 +19,7 @@ def validate_type(number):
     return number
 
 def generate_prime_factors(number,factors):
-    divisor = [2,3]
+    divisor = [2,3,5]
 
     for divisor in divisor:                             # use the same loop for prime value in the array
         test = number                                   #initialize test variable for iterative testing

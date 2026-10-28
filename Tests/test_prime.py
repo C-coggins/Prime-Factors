@@ -40,3 +40,6 @@ def test_enter_8_returns_2_2_2():
 
 def test_enter_9_returns_3_3():
     assert generate_prime_factors(9, []) == [3,3]  # test "9" input returns "3,3" in the factors array
+
+def test_enter_5_returns_5():         # as an aside to test 5 as a prime value
+    assert generate_prime_factors(5, []) == [5]  # test "5" input returns "5" in the factors array
