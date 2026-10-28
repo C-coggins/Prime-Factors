@@ -27,4 +27,7 @@ def test_enter_2_returns_2():
     assert generate_prime_factors(2, []) == [2]  # test "2" input returns "2" in the factors array
 
 def test_enter_3_returns_3():
-    assert generate_prime_factors(3, []) == [3]  # test "2" input returns "2" in the factors array
+    assert generate_prime_factors(3, []) == [3]  # test "3" input returns "3" in the factors array
+
+def test_enter_4_returns_2_2():
+    assert generate_prime_factors(4, []) == [2,2]  # test "4" input returns "2,2" in the factors array
