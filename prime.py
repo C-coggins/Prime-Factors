@@ -19,15 +19,16 @@ def validate_type(number):
 
 def generate_prime_factors(number,factors):
     divisor = 2
+    remainder = number % divisor                # variable for debug purposes
+    if number % divisor == 0:                   # if the remainder = 0 then the number is divisable evenly by 2
+        factors.append(2)                       # append "2" to the factors list
 
-    if divisor % number >= 2:
-        factors.append(divisor)
-    return factors
+    return factors                              # return the factors variable to the main function
 
 
 def main():
 
-    number = 5                                              # variable from which to generate the prime factors
+    number = 2                                             # variable from which to generate the prime factors
     factors = []                                            # variable to hold the prime factors
     validate_type(number)                                   # call Validate_type function to verify the variable is a positive integer
     factors = generate_prime_factors(number,factors)        # cal generate_prime_factors to calculate the factors for a given number
